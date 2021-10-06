@@ -1,0 +1,10 @@
+$bg:red;
+
+body{
+  background: $bg;
+  // background-image: url('../assets/Museum-I-.png');
+display: flex;
+flex-wrap: wrap;
+box-shadow: inset;
+font-family: 'Courier New', Courier, monospace;
+}
