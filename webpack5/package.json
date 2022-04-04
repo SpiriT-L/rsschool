@@ -1,0 +1,24 @@
+{
+  "name": "webpack5",
+  "version": "1.0.0",
+  "description": "Working assembly for web development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "scss",
+    "js"
+  ],
+  "author": "LeonID",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.71.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}
