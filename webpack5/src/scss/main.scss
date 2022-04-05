@@ -1,7 +1,11 @@
 @import "_vendor.scss";
+@import "_vars.scss";
 body {
-  background-color: green;
+  background-color: red;
 }
-h1{
-  color: #000;
+// h1{
+//   color: #000;
+// }
+main {
+  background-image: url(../img/png/1.png);
 }
