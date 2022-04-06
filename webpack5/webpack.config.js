@@ -3,6 +3,7 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const TerserWebpackPlugin = require('terser-webpack-plugin');
 
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
@@ -11,6 +12,21 @@ const filename = (ext) =>
   isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`;
 const filenameimg = (ext) =>
   isDev ? `[name]${ext}` : `[name].[contenthash]${ext}`;
+
+// const optimization = () => {
+//   const configObj = {
+//     splitChunks: 'all',
+//   };
+
+//   if (isProd) {
+//     configObj.minimizer = [
+//       new MiniCssExtractPlugin(),
+//       new TerserWebpackPlugin(),
+//     ];
+//   }
+
+//   return configObj;
+// };
 
 module.exports = {
   devServer: {
@@ -38,6 +54,7 @@ module.exports = {
     assetModuleFilename: `./img/${filenameimg('[ext]')}`,
     // assetModuleFilename: 'images/[hash][ext][query]',
   },
+  // optimization: optimization(),
   plugins: [
     new HTMLWebpackPlugin({
       template: path.resolve(__dirname, 'src/index.html'),
